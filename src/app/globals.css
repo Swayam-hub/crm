@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* ... keep your @theme inline and :root variables as they are ... */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  html {
+    /* Enables native smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+    /* Improves font rendering on high-end displays */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* KILLER SELECTION COLOR */
+  ::selection {
+    background-color: #6366f1; /* Your Indigo brand color */
+    color: white;
+    text-shadow: none;
+  }
+
+  /* Custom Scrollbar for a premium "app" feel */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #09090b;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 5px;
+    border: 2px solid #09090b;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3f3f46;
+  }
+}
