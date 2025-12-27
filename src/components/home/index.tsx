@@ -6,7 +6,7 @@ import HeroComponent from "@/components/home/HeroComponent";
 import { Pricing } from "@/components/home/Pricing";
 import { StickyComparison } from "@/components/home/StickyComparison";
 
-export default function HeroHome() {
+export default function HomeMain() {
   return (
     <div className="relative z-10">
       <HeroComponent />

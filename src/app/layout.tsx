@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/providers/SmoothScroll";
-import { Header } from "@/components/global/Header/Header";
-import { KillBackground } from "@/components/global/Background/KillBackground";
-import { LayoutShell } from "@/components/providers/layout-shell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,19 +50,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="dark">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#09090b]`}>
-        <KillBackground />
-        <Header />
-        <LayoutShell>
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
-        </LayoutShell>
+        {children}
       </body>
     </html>
   );
