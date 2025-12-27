@@ -30,7 +30,7 @@ export const KillBackground = () => {
   return (
     <div ref={containerRef} className="fixed inset-0 -z-50 bg-[#09090b] overflow-hidden">
       {/* 1. The Grid Layer */}
-      <div className="absolute inset-0 opacity-[0.08] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_90%)]"
+      <div className="absolute inset-0 opacity-[0.08] mask-[radial-gradient(ellipse_at_center,black_40%,transparent_90%)]"
            style={{ backgroundImage: `linear-gradient(#334155 1px, transparent 1px), linear-gradient(90deg, #334155 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
 
       {/* 2. Floating Glass Nodes */}

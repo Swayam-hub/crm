@@ -14,7 +14,7 @@ import {
   Activity
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { useSidebarStore } from "@/zustand/UseSidebar";
+import { useSidebarStore } from "@/zustand/use-sidebar";
 
 const navItems = [
   { name: "Overview", icon: <LayoutGrid size={18} />, active: true },
@@ -28,13 +28,16 @@ export const Sidebar = () => {
   const { isCollapsed, toggle } = useSidebarStore();
 
   return (
-    <aside className={cn(
-      "fixed left-0 top-0 h-full bg-[#050505] border-r border-white/5 z-50 transition-all duration-500 ease-in-out flex flex-col",
-      isCollapsed ? "w-20" : "w-64"
-    )}>
+    <aside 
+      className={cn(
+        "fixed left-0 top-14 z-50 border-r border-white/5 bg-[#050505] transition-all duration-500 ease-in-out flex flex-col",
+        "h-[calc(100vh-3.5rem)]",
+        isCollapsed ? "w-20" : "w-64"
+      )}
+    >
       {/* 1. Workspace Switcher */}
       <div className="p-6">
-        <div className="flex items-center gap-3 p-2 rounded-xl bg-white/[0.03] border border-white/5 group cursor-pointer hover:border-indigo-500/30 transition-all">
+        <div className="flex items-center gap-3 p-2 rounded-xl bg-white/3 border border-white/5 group cursor-pointer hover:border-indigo-500/30 transition-all">
           <div className="h-8 w-8 rounded-lg bg-indigo-600 flex items-center justify-center shrink-0 shadow-[0_0_15px_rgba(79,70,229,0.4)]">
             <Monitor size={16} className="text-white" />
           </div>
@@ -107,7 +110,7 @@ export const Sidebar = () => {
           </div>
         )}
         <button 
-          // onClick={() => setIsCollapsed(!isCollapsed)}
+          onClick={toggle}
           className="p-2 rounded-lg hover:bg-white/5 text-zinc-500"
         >
           <ChevronRight size={16} className={cn("transition-transform", !isCollapsed && "rotate-180")} />

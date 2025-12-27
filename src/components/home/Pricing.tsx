@@ -41,7 +41,7 @@ export const Pricing = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
       {/* Background Accent */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/5 blur-[120px] -z-10 rounded-full" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-indigo-500/5 blur-[120px] -z-10 rounded-full" />
 
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         <div className="text-center mb-16">
@@ -99,7 +99,7 @@ export const Pricing = () => {
                 "relative flex flex-col p-8 rounded-[2.5rem] border transition-all duration-500 group",
                 plan.popular 
                   ? "bg-zinc-900 border-indigo-500/50 shadow-[0_0_40px_rgba(79,70,229,0.1)] scale-105 z-10" 
-                  : "bg-white/[0.02] border-white/5 hover:border-white/20"
+                  : "bg-white/2 border-white/5 hover:border-white/20"
               )}
             >
               {plan.popular && (

@@ -79,13 +79,13 @@ export const StickyComparison = () => {
               <th className="p-6 text-xs uppercase tracking-widest font-bold text-indigo-400 bg-indigo-500/5 relative">
                 OriginFlow
                 {/* Visual indicator for "The Winner" */}
-                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-indigo-500 shadow-[0_0_15px_#6366f1]" />
+                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-indigo-500 shadow-[0_0_15px_#6366f1]" />
               </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white/5">
             {features.map((f, i) => (
-              <tr key={i} className="comparison-row group hover:bg-white/[0.02] transition-colors">
+              <tr key={i} className="comparison-row group hover:bg-white/2 transition-colors">
                 <td className="p-6">
                   <div className="flex items-center gap-3">
                     <div className="text-zinc-500 group-hover:text-indigo-400 transition-colors">{f.icon}</div>
@@ -94,7 +94,7 @@ export const StickyComparison = () => {
                 </td>
                 <td className="p-6 text-sm text-zinc-500">{f.competitor}</td>
                 <td className="p-6 text-sm text-zinc-500">{f.crm}</td>
-                <td className="p-6 text-sm font-bold text-white bg-indigo-500/[0.02] border-x border-white/5">
+                <td className="p-6 text-sm font-bold text-white bg-indigo-500/2 border-x border-white/5">
                   <div className="flex items-center gap-2">
                     <Check size={16} className="text-indigo-400" />
                     {f.origin}
@@ -108,7 +108,7 @@ export const StickyComparison = () => {
 
       {/* Trust Summary Footer */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="flex items-start gap-4 p-6 rounded-2xl border border-white/5 bg-white/[0.01]">
+          <div className="flex items-start gap-4 p-6 rounded-2xl border border-white/5 bg-white/1">
               <div className="h-10 w-10 rounded-xl bg-green-500/10 flex items-center justify-center text-green-500">
                   <Zap size={20} />
               </div>
@@ -117,7 +117,7 @@ export const StickyComparison = () => {
                   <p className="text-xs text-zinc-500">Your business never stops, neither do we.</p>
               </div>
           </div>
-          <div className="flex items-start gap-4 p-6 rounded-2xl border border-white/5 bg-white/[0.01]">
+          <div className="flex items-start gap-4 p-6 rounded-2xl border border-white/5 bg-white/1">
               <div className="h-10 w-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500">
                   <Shield size={20} />
               </div>
@@ -126,7 +126,7 @@ export const StickyComparison = () => {
                   <p className="text-xs text-zinc-500">Bank-level encryption for all CRM data.</p>
               </div>
           </div>
-          <div className="flex items-start gap-4 p-6 rounded-2xl border border-white/5 bg-white/[0.01]">
+          <div className="flex items-start gap-4 p-6 rounded-2xl border border-white/5 bg-white/1">
               <div className="h-10 w-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-500">
                   <BarChart size={20} />
               </div>

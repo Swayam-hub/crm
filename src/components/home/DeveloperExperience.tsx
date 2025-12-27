@@ -92,7 +92,7 @@ export const DeveloperExperience = () => {
   return (
     <section className="py-32 px-6 relative overflow-hidden">
       {/* Subtle Grid Background specifically for this section */}
-       <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+       <div className="absolute inset-0 opacity-[0.05] bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         
@@ -139,7 +139,7 @@ export const DeveloperExperience = () => {
                 className="rounded-2xl border border-white/10 bg-[#09090b]/80 backdrop-blur-xl overflow-hidden shadow-2xl will-change-transform"
             >
                 {/* Faux Terminal Header */}
-                <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/[0.02]">
+                <div className="flex items-center justify-between px-4 py-3 border-b border-white/5 bg-white/2">
                     <div className="flex gap-1.5">
                         <div className="w-3 h-3 rounded-full bg-zinc-700" />
                         <div className="w-3 h-3 rounded-full bg-zinc-700" />

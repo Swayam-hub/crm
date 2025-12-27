@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/providers/SmoothScroll";
-import { Header1 } from "@/components/global/Header/Header1";
-// import { Header } from "@/components/global/Header/FloatingHeader";
+import { Header } from "@/components/global/Header/Header";
+import { KillBackground } from "@/components/global/Background/KillBackground";
+import { LayoutShell } from "@/components/providers/layout-shell";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,13 +59,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header1 />
-        <SmoothScroll>
-        {children}
-        </SmoothScroll>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#09090b]`}>
+        <KillBackground />
+        <Header />
+        <LayoutShell>
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </LayoutShell>
       </body>
     </html>
   );

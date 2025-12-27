@@ -21,7 +21,7 @@ const HeroComponent = () => {
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-8">
             The Builder <br />
             <span className="text-zinc-500 italic">for the</span> <br />
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               1% of Marketers.
             </span>
           </h1>
@@ -60,7 +60,7 @@ const HeroComponent = () => {
           <div className="absolute inset-0 bg-indigo-500/20 blur-[100px] rounded-full group-hover:bg-indigo-500/30 transition-colors" />
           
           <div className="relative border border-white/10 bg-zinc-900/80 rounded-2xl p-2 backdrop-blur-3xl shadow-2xl">
-            <div className="rounded-xl border border-white/5 bg-black aspect-[4/3] overflow-hidden flex flex-col">
+            <div className="rounded-xl border border-white/5 bg-black aspect-4/3 overflow-hidden flex flex-col">
                {/* CRM Visualization Component Peek */}
                <div className="p-6 border-b border-white/5 flex items-center justify-between bg-zinc-950/50">
                   <div className="flex gap-4">

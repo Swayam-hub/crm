@@ -49,7 +49,7 @@ export const DevBento = () => {
           <div className="p-8 h-full flex flex-col justify-center">
              <div className="relative space-y-12">
                 {/* Visual Connection Line */}
-                <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-indigo-500 via-zinc-800 to-transparent" />
+                <div className="absolute left-6 top-0 bottom-0 w-px bg-linear-to-b from-indigo-500 via-zinc-800 to-transparent" />
 
                 <PipelineStep status="success" label="Commit: Initializing SDK" sub="main -> origin" time="2m ago" />
                 <PipelineStep status="loading" label="Building Edge Functions" sub="Optimizing chunks..." time="Running" />
@@ -70,15 +70,15 @@ export const DevBento = () => {
           <DevHeader title="Schema Engine" icon={<Database size={14} />} />
           <div className="p-6">
              <div className="space-y-2 font-mono text-xs">
-                <div className="flex justify-between p-2 rounded bg-white/[0.03] border border-white/5">
+                <div className="flex justify-between p-2 rounded bg-white/3 border border-white/5">
                    <span className="text-zinc-400">userId</span>
                    <span className="text-indigo-400">UUID</span>
                 </div>
-                <div className="flex justify-between p-2 rounded bg-white/[0.03] border border-white/5">
+                <div className="flex justify-between p-2 rounded bg-white/3 border border-white/5">
                    <span className="text-zinc-400">last_login</span>
                    <span className="text-purple-400">Timestamp</span>
                 </div>
-                <div className="flex justify-between p-2 rounded bg-white/[0.03] border border-white/5">
+                <div className="flex justify-between p-2 rounded bg-white/3 border border-white/5">
                    <span className="text-zinc-400">conversion</span>
                    <span className="text-emerald-400">Boolean</span>
                 </div>
@@ -114,7 +114,7 @@ export const DevBento = () => {
         </DevBlock>
 
         {/* BOTTOM: SYSTEM HEALTH / PERFORMANCE */}
-        <DevBlock className="md:col-span-12 md:row-span-1 bg-gradient-to-r from-black to-[#0c0c0e]">
+        <DevBlock className="md:col-span-12 md:row-span-1 bg-linear-to-r from-black to-[#0c0c0e]">
           <DevHeader title="Global Performance Index" icon={<Activity size={14} />} />
           <div className="p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
              <Metric label="Server Latency" value="14ms" trend="-2ms" />
@@ -174,7 +174,7 @@ const Metric = ({ label, value, trend }: any) => (
 );
 
 const DevBlock = ({ children, className }: any) => (
-  <div className={`relative rounded-[2rem] border border-white/10 bg-[#09090b] group hover:border-white/20 transition-colors ${className}`}>
+  <div className={`relative rounded-4xl border border-white/10 bg-[#09090b] group hover:border-white/20 transition-colors ${className}`}>
      {children}
   </div>
 );
